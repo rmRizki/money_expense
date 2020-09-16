@@ -77,17 +77,21 @@ class _AddFormFieldState extends State<AddFormField> {
       _showDialog('Nominal tidak boleh bernilai 0');
     } else {
       var category = Provider.of<CategoryData>(context, listen: false).category;
-      var nominal = int.parse(nominalString);
-
-      Provider.of<ExpenseData>(context, listen: false).saveExpense(
-        Expense(
-          name: name,
-          nominal: nominal,
-          date: date,
-          category: category['name'],
-        ),
-      );
-      Navigator.of(context).pop();
+      int nominal;
+      try {
+        nominal = int.parse(nominalString);
+        Provider.of<ExpenseData>(context, listen: false).saveExpense(
+          Expense(
+            name: name,
+            nominal: nominal,
+            date: date,
+            category: category['name'],
+          ),
+        );
+        Navigator.of(context).pop();
+      } catch (e) {
+        _showDialog('$e');
+      }
     }
   }
 
