@@ -8,6 +8,10 @@ class ExpenseData extends ChangeNotifier {
   static const String _boxName = 'expenseBox';
   List<Expense> _expenses = [];
 
+  ExpenseData() {
+    initExpenses();
+  }
+
   void initExpenses() async {
     var box = await Hive.openBox<Expense>(_boxName);
     _expenses = box.values.toList();
