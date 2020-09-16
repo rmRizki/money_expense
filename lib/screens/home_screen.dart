@@ -1,25 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:money_expense/models/expense_data.dart';
 import 'package:money_expense/theme/svg_assets.dart';
 import 'package:money_expense/widgets/expense_category_list.dart';
 import 'package:money_expense/widgets/main_app_bar.dart';
 import 'package:money_expense/widgets/total_expense_list.dart';
-import 'package:provider/provider.dart';
 
-class HomeScreen extends StatefulWidget {
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Provider.of<ExpenseData>(context, listen: false).initExpenses();
-  }
-
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
