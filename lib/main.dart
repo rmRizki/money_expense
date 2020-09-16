@@ -7,8 +7,8 @@ import 'package:money_expense/helpers/db_helper.dart';
 import 'package:money_expense/theme/style.dart';
 import 'package:provider/provider.dart';
 
-void main() {
-  initHive();
+void main() async{
+  await initHive();
   runApp(MyApp());
 }
 
