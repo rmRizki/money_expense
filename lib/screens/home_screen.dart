@@ -49,6 +49,9 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           TotalExpenseList(),
+          SizedBox(
+            height: 51.0,
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
