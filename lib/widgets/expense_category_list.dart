@@ -34,7 +34,7 @@ class ExpenseCategoryList extends StatelessWidget {
 
                 return AnimationConfiguration.staggeredList(
                   position: index,
-                  duration: Duration(seconds: 3),
+                  duration: Duration(seconds: 2),
                   child: SlideAnimation(
                     horizontalOffset: 80.0,
                     child: FadeInAnimation(
