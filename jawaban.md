@@ -1,7 +1,7 @@
 # Jawaban Tes Pengetahuan
 
 1. **Sudah berapa lama anda mulai menggunakan Flutter?**
-   - Saya mulai mengenal flutter sejak akhir tahun 2018 ketika ada workshop yang diadakan di kota saya, kemudian baru mulai belajar lagi diawal tahun 2019 sampai pertengahn 2019 sebelum akhirnya mulai fokus ke native android. lalu pada tahun 2020 mulai serius belajar lagi, tapi sempat tertunda selama beberapa bulan kemarin karena di tempat magang sebelumnya saya harus membuat project web berbasis laravel. Jadi bisa dibilang, sudah kurang lebih 1 tahun saya sudah menggunakan flutter secara aktif.
+   - Saya mulai mengenal flutter sejak akhir tahun 2018 ketika ada workshop yang diadakan di kota saya, kemudian baru mulai belajar lagi diawal tahun 2019 sampai pertengahn 2019 sebelum akhirnya mulai fokus ke native android. lalu pada tahun 2020 mulai serius belajar menekuni flutter lagi, tapi sempat tertunda selama beberapa bulan kemarin karena di tempat magang sebelumnya saya harus membuat project web berbasis laravel. Jadi bisa dibilang, sudah kurang lebih 1 tahun saya sudah menggunakan flutter secara aktif.
 2. **Apa saja library Flutter yang sering atau biasa anda pakai? Jelaskan kegunaannya bagi anda.**
    - [**http**](https://pub.dev/packages/http) -> sangat berguna ketika ingin melakukan request data dari internet/API.
    - [**json_serializable**](https://pub.dev/packages/json_serializable) -> mempermudah parsing JSON
