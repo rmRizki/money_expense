@@ -47,7 +47,7 @@
         - membatasi ukuran layar hanya untuk beberapa jenis ukuran saja
         - meng-kompress file PNG dan JPG
         - jalankan perintah berikut untuk menghasilkan dua output file APK berukuran lebih kecil, 1 untuk perangkat android 32-bit, 1 untuk perangkat android 64-bit : `flutter build apk --split-per-abi`
-      - [Meningkatkan Performa Rendering](https://flutter.dev/docs/perf/rendering) : 
+      - [Meningkatkan Performa Rendering](https://flutter.dev/docs/perf/rendering) :
         - Menggunakan tools untuk profiling seperti [DevTools](https://flutter.dev/docs/development/tools/devtools/overview), mengaktifkan debug profilling mode, dan langsung mencoba pada perangkat asli untuk melihat hasil lebih optimal.
         - Menerapkan effect hanya pada saat dibutuhkan, jangan berlebihan, salah satu contoh effect adalah opacity. Jika ingin menerapkan opacity pada gambar, lebih baik mengikuti metode seperti yang dijelaskan pada bagian [Transparent Image](https://api.flutter.dev/flutter/widgets/Opacity-class.html#transparent-image) di dokumentasi flutter.
         - Load list yang panjang menggunakan `ListView.builder()`
