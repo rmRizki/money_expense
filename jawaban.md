@@ -41,4 +41,15 @@
       - Hargai privasi dan keamanan pengguna. Jangan mengambil data atau akses yang tidak diperlukan, contohnya : jangan meminta akses untuk mengakses folder, info baterai, lokasi, dan kamera jika yang dibutuhkan oleh aplikasi hanyalah koneksi internet.
       - Beberapa masalah keamanan mobile lainnya juga dapat ditelusuri lebih lanjut pada daftar [OWASP Mobile Top 10](https://owasp.org/www-project-mobile-top-10/)
     - **Performance** :
-      - sedang ditulis
+      - **App Size** -> Berdasarkan [dokumentasi flutter app size](https://flutter.dev/docs/perf/app-size), terdapat beberapa cara untuk mengoptimalkan dan menurunkan ukuran aplikasi, diantaranya :
+        - Menghapus resource yang tidak dipakai
+        - meminimalisir resource yang diimport dari library
+        - membatasi ukuran layar hanya untuk beberapa jenis ukuran saja
+        - meng-kompress file PNG dan JPG
+        - jalankan perintah berikut untuk menghasilkan dua output file APK berukuran lebih kecil, 1 untuk perangkat android 32-bit, 1 untuk perangkat android 64-bit : `flutter build apk --split-per-abi`
+      - [Meningkatkan Performa Rendering](https://flutter.dev/docs/perf/rendering) : 
+        - Menggunakan tools untuk profiling seperti [DevTools](https://flutter.dev/docs/development/tools/devtools/overview), mengaktifkan debug profilling mode, dan langsung mencoba pada perangkat asli untuk melihat hasil lebih optimal.
+        - Menerapkan effect hanya pada saat dibutuhkan, jangan berlebihan, salah satu contoh effect adalah opacity. Jika ingin menerapkan opacity pada gambar, lebih baik mengikuti metode seperti yang dijelaskan pada bagian [Transparent Image](https://api.flutter.dev/flutter/widgets/Opacity-class.html#transparent-image) di dokumentasi flutter.
+        - Load list yang panjang menggunakan `ListView.builder()`
+        - Menggunakan State Management seperti Bloc atau Provider supaya Widget yang di refresh hanya bagian tertentu yang mengalami perubahan nilai saja, hal ini dikarenakan State Management dasar Flutter yang menggunakan `setState()` akan merebuild ulang semua widget di layar ketika data berubah.
+        - Video [Flutter performance tips - Flutter in Focus](https://www.youtube.com/watch?v=PKGguGUwSYE) juga menyediakan informasi yang bagus untuk memahami konsep dasar tentang performa
