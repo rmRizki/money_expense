@@ -3,7 +3,7 @@ import 'package:money_expense/models/category_data.dart';
 import 'package:money_expense/models/date_data.dart';
 import 'package:money_expense/models/expense_data.dart';
 import 'package:money_expense/routes.dart';
-import 'package:money_expense/db/db_helper.dart';
+import 'package:money_expense/helpers/db_helper.dart';
 import 'package:money_expense/theme/style.dart';
 import 'package:provider/provider.dart';
 

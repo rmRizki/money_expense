@@ -8,11 +8,20 @@ import 'package:money_expense/widgets/main_app_bar.dart';
 import 'package:money_expense/widgets/total_expense_list.dart';
 import 'package:provider/provider.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Provider.of<ExpenseData>(context, listen: false).initExpenses();
+  }
+
   @override
   Widget build(BuildContext context) {
-    Provider.of<ExpenseData>(context, listen: false).initExpenses();
-
     return Scaffold(
       appBar: PreferredSize(
         child: AppBar(),
