@@ -32,4 +32,13 @@
      - untuk permasalahan AR, saya rasa untuk saat ini masih ada alternatif lain yang bisa dicoba, misalnya dengan menggunakan [echoar_package](https://pub.dev/packages/echoar_package) atau dengan meng-embed [widget unity](https://pub.dev/packages/flutter_unity) yang berisi AR Foundation didalamnya.
      - Namun untuk masalah seperti App Widget pada halaman home Android, solusi yang terpikirkan oleh saya hanyalah dengan cara langsung menulis kode native java/kotlin secara langsung, karena flutter sendiri belum mendukung fitur tersebut.
 5. **Jelaskan teknik-teknik apa saja yang dapat meningkatkan performance dan keamanan sebuah aplikasi Flutter**
-
+    - **Keamanan** :
+      - Untuk mengamankan **Autentikasi** aplikasi, disarankan memakai plugin resmi yang sudah disediakan seperti [Google SignIn](https://pub.dev/packages/google_sign_in)
+      - Jangan pernah menyimpan file sensitive seperti Password dan PIN tanpa dienkripsi, terutama pada SharedPreferences, karena kegunaan SharedPreferences lebih tepatnya hanya untuk menyimpan data yang simpel.
+      - Jika menggunakan database lokal untuk menyimpan file yang sensitif, pastikan untuk menggunakan enkripsi yang sudah disediakan. misalnya dengan menggunakan [sqflite_sqlcipher](https://pub.dev/packages/sqflite_sqlcipher) untuk database berbasis sqlite, atau menggunakan [Encrypted box](https://docs.hivedb.dev/#/advanced/encrypted_box) pada Hive.
+      - Menambahkan beberapa permission yang dibutuhkan untuk setiap fitur yang dipakai, misalnya izin untuk mengakses file/folder dan izin untuk mengakses kamera, hal ini berhubungan dengan privasi dan keamanan data pengguna
+      - Manfaatkan autentikasi lanjutan seperti autentikasi biometric untuk menjaga privasi dan keamanan aplikasi si pengguna, terdapat plugin seperti [local_auth](https://pub.dev/packages/local_auth) yang dapat menerapkan fitur tersebut.
+      - Hargai privasi dan keamanan pengguna. Jangan mengambil data atau akses yang tidak diperlukan, contohnya : jangan meminta akses untuk mengakses folder, info baterai, lokasi, dan kamera jika yang dibutuhkan oleh aplikasi hanyalah koneksi internet.
+      - Beberapa masalah keamanan mobile lainnya juga dapat ditelusuri lebih lanjut pada daftar [OWASP Mobile Top 10](https://owasp.org/www-project-mobile-top-10/)
+    - **Performance** :
+      - sedang ditulis
